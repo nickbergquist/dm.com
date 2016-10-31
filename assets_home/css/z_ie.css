@@ -1,0 +1,978 @@
+/*
+////////////////////////////////////////////////////////////////////////
+///   KC : IE7/IE8 - load via IE conditional comments only           ///
+///                                                                  ///
+///   Contains two regions:                                          ///
+///         (i) Selectors replicated from the standard stylesheets   ///
+///             but removed from within media queries not            ///
+///             understood by IE7/IE8.                               ///
+///         (ii) Selectors specific to these old IE browsers.        ///
+///                                                                  ///
+///   Note: Any selectors not understood by IE7/IE8 need to be       ///
+///         handled using jQuery in the IE7/IE8 script file.         ///
+///         Avoid burdening the HTML with attributes for old         ///
+///         versions of IE.                                          ///
+///         Dispose of this file once IE7/8 support ends!            ///
+///                                                                  ///
+///   Queries: nicholas.bergquist@informa.com                        ///
+////////////////////////////////////////////////////////////////////////
+*/
+
+/* 
+BEGIN (i) Replicated selectors 
+
+In this region below: all selectors copied from within media query blocks in b_layout.css, c_colour.css 
+and d_typography without the media queries blocks. This is specifically for IE7 and IE8 which don't 
+natively support media queries.
+
+Keep the copied selectors in the same consecutive order as found in the media queries. The CSS cascade 
+will produce the static full-size desktop display. 
+
+Any subsequent udpates: repeat the process detailed above.
+*/
+	/*************************/
+	/*  from b_layout.css..  */
+	/*************************/
+	
+	/*   Media between 480 and 767  */
+	dd {
+		margin-right: 1.04%;
+	}
+	dd, dt {
+		padding: 0 1.04% 0 0;
+	}
+	form dl, .clipping-manager fieldset dl {
+		width: 85%;
+	}
+	form dd, .clipping-manager fieldset dd {
+		float: left;
+		margin-right: 0;
+		padding: 0;
+		width: 70%;
+	}
+	dd span {
+		margin-top: 0.5em;
+		padding: 0 0 0 4%;
+	}
+	form dt, .clipping-manager fieldset dt {
+		clear: left;
+		float: left;
+		margin-top: 10px;
+		padding-right: 2.04%; /* (20 / 980) * 100 */ 
+		width: 25%
+	}
+	select {
+		width: 61%;
+	}
+	select.narrow {
+		width: 30%;
+	}
+	
+	/* class elements: =. */
+	.aside-tool form {
+		width: 348px;
+	}
+	.aside-tool form dl {
+		width: 350px;
+	}
+	.aside-tool form dd {
+		width: 245px;
+	}
+	.aside-tool form dt {
+		width: 95px;
+	}
+	.button-show.button-search {
+		right: 14%;
+	}
+	.definition-simple dd {
+		padding-top: 5px;
+	}
+	.definition-simple dt {
+		border-bottom: none;
+		margin-right: 10px;
+		padding: 5px 10px;
+		width: 22%;
+	}
+	.home main h1 {
+		height: 75px;
+		width: 414px;
+	}
+	.menu-fat li {
+		float: left;
+		width: 47.6%;
+	}
+	.menu-fat .home {
+		width: 98%;
+	}
+	.menu-fat .lone {
+		position: absolute;
+		right: 5%;
+		top: 4.75em;
+		width: auto;
+	}
+	.menu-fat .lone a {
+		padding: 3px 8px;
+	}
+	.menu-select {
+		float: right;
+		width: 47%;
+	}
+	.menu-tabs {
+		border-bottom: 1px solid;
+	}
+	.menu-tabs a {
+		font-size: 1em;
+		padding: 8px 12px 6px;
+	}
+	.menu-tabs li {
+		bottom: -1px;
+		position: relative;	
+	}
+	.menu-tabs li a {
+		border: none;
+	}
+	.menu-tabs li.selected a {
+		border-bottom: 1px solid;
+	}
+	.reversed-dt {
+		left: 31%;
+		margin-top: 0;
+		position: relative;
+	}
+	.reversed-dd input {
+		position: relative;
+		top: 2px;
+	}
+	.search-advanced {
+		width: auto;
+	}
+	
+	/* id elements: =# */
+	#about {
+		clear: left;
+	}
+	#nav-global > ul > li:nth-child(1n+2) {
+		width: 31%
+	}
+	#nav-local {
+		min-height: auto;
+		padding: 0
+	}
+	
+	
+	/*   Media between 768 and 899  */
+	.js .fancy form dl {
+		width: 100%;
+	}
+	header {
+		padding: 0;
+	}
+	header h1 {
+		float: left;
+		margin: 30px 0 30px 2%;
+		position: static;
+	}
+	.fs header h1 {
+		width: 91%
+	}
+	/*
+	header h1 a {
+		display: block;
+		height: 100%;
+		overflow: hidden;
+		text-indent: -999em;
+	}
+	*/
+	main {
+		clear: both;
+		overflow: hidden;
+		padding-top: 0;
+		position: relative
+	}
+	
+	/* class elements: =. */
+	.content-tabs {
+		border: 1px solid;
+		overflow: hidden;
+		padding: 30px;
+	}
+	.content-tabs ul {
+		-webkit-column-count: 3; -moz-column-count: 3; column-count: 3;
+		-webkit-column-gap: 2em; -moz-column-gap: 2em; column-gap: 2em;
+	}
+	.content-tabs li {
+		margin-bottom: 0.2em;
+		overflow: hidden; /* stop element spreading over columns */
+		padding-left: 0;
+	}
+	.heading-fancy {
+		margin: 0 0 20px;
+	}
+	/* the visibility/behaviour of these objects is controlled in main.js */
+	.js #nav-local > ul, .js #search, .js #nav-global > ul li:nth-child(n+2), .js #nav-global ul ul {
+		display: block;
+	}
+	.menu-alternate {
+		padding-bottom: 3.5em
+	}
+	.menu-fat li {
+		width: 31%;
+	}
+	.menu-fat .home li {
+		width: 23%;
+	}
+	.menu-fat .home li:nth-child(1n+3) {
+		margin: 5px 1%;
+	}
+	.menu-fat .home ul a {
+		width: 100%;
+	}
+	.menu-fat .lone {
+		position: static;
+		width: auto;
+	}
+	.menu-fat.menu-buttons a {
+		padding: 6px 20px;
+	}
+	.menu-tabs-alternate {
+		border-bottom: none;
+		margin-bottom: 0;
+		margin-left: 10px;
+	}
+	.menu-tabs-alternate a {
+		padding: 15px 14px 15px 58px;
+	}
+	.site-menu {
+		padding-top: 0;
+	}
+	
+	/* id elements: =# */
+	#links-dmhc {
+		margin: 2.25em auto 1.25em;
+		width: 86%;
+	}
+	#links-dmhc .dmhc-analyst-insight {
+		float: left;
+		height: 53px;
+		overflow: hidden;
+		text-indent: -999em;
+		width: 280px;
+	}
+	#links-dmhc .dmhc-consulting {
+		float: right;
+		height: 53px;
+		overflow: hidden;
+		text-indent: -999em;
+		width: 280px;
+	}
+	#main .dmhc-analyst-insight a {
+		border: 0;
+		box-shadow: none;
+	}
+	#main .dmhc-consulting a {
+		border: 0;
+		box-shadow: none;
+	}
+	#nav-global {
+		margin: 0 5px;
+	}
+	#nav-global p {
+		float: right;
+		margin-bottom: 0;
+		padding: 0 1.02% 0 0; /* 10/980 x 100 */
+		width: auto;
+	}
+	#nav-global > ul {
+		clear: none;
+		overflow: visible;
+		padding: 0;
+	}
+	#nav-global > ul > li {
+		clear: none;
+		margin: 0;
+		width: auto;
+	}
+	#nav-global > ul > li > a {
+		border: none;
+		border-left: 1px solid;
+		border-right: 1px solid;
+		height: 100%;
+		padding: 5px 10px;
+		position: relative;
+		z-index: 1;
+	}
+	#nav-global li:hover ul, #nav-global li:focus ul, #nav-global .home .show-menu {
+		left: auto;
+	}
+	#nav-global .home {
+		width: 31px;
+	}
+	#nav-global .home > a {
+		border: none;
+		left: 0;
+		padding: 5px 0;
+		position: relative;
+		width: 31px;
+		z-index: 3;
+	}
+	/*
+	#nav-global .home > a:hover, #nav-global .home > a.highlight {
+		border-right: none;
+	}
+	*/
+	#nav-global .home li {
+		width: 48%;
+	}
+	#nav-global .home li:nth-child(1n+3) {
+		margin: 0 1% 5px;
+	}
+	#nav-global .home ul {
+		left: -999em;
+		margin: 0;
+		padding: 0 5px;
+		position: absolute;
+		top: 2.25em;
+		width: 350px;
+		z-index: 2;
+	}
+	#nav-global > ul > li:nth-child(1n+2) {
+		width: auto
+	}
+	#nav-local-inactive {
+		border-bottom: 2px solid;
+		padding: 0 0 0 4%;
+	}
+	
+	/*   Media between 900 and 1023  */
+	footer[role='contentinfo'] {
+		padding: 0 0 20px;
+		position: relative
+	}
+	form dl {
+		width: 70%;
+	}
+	
+	/* class elements: =. */
+	.collection-control label {
+		left: 150px;
+	}
+	.js .fancy {
+		float: left;
+		width: 450px;
+	}
+	.js .fancy dl {
+		width: 100%; /* allow for scrolling forms and form width containing error messages */
+	}
+	.fancy dl {
+		margin-bottom: 0;
+	}
+	.fancy fieldset {
+		margin-bottom: 5px;
+	}
+	.fancy.nested {
+		padding: 0;
+	}
+	.fancy.nested a {
+		padding: 6px 35px 6px 15px;
+	}
+	.fancy.nested h3 {
+		padding: 13px 20px 10px 35px;
+		margin: 0;
+	}
+	.fancy.nested li {
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+	.fancy.nested ul {
+		margin-bottom: 0;
+		padding: 10px 0 15px;
+	}
+	.header-non-standard {
+		margin-bottom: 0;
+	}
+	.menu-drop {
+		position: relative;
+	}
+	.menu-drop ul {
+		margin-left: 1px;
+		padding: 10px 0 5px 5px;
+		width: 210px;
+	}
+	.menu-drop ul a {
+		margin-bottom: 1em;
+		margin-right: 10px;
+		padding: 0 15px 0 25px;
+	}
+	.menu-drop ul li {
+		margin: 0;
+		width: 100%;
+	}
+	.menu-drop:hover > ul, .menu-drop:focus > ul, .menu-drop .show-menu {
+		left: auto;
+		z-index: 1;
+	}
+	.settings-menu .menu-drop ul {
+		width: 170px;
+	}
+	.settings-menu .menu-drop:hover > ul, .settings-menu .menu-drop:focus > ul, .settings-menu .menu-drop .show-menu {
+		margin-right: 1px;
+		right: 0;
+	}
+	.menu-fat a {
+		border: none;
+	}
+	.menu-fat li {
+		width: auto;
+	}
+	.settings-menu {
+		float: right;
+		overflow: visible;
+		width: auto;
+	}
+	.site-menu li, .settings-menu li {
+		border: none;
+	}
+	.settings-menu li {
+		margin: 0;
+	}
+	.site-menu {
+		float: left;
+		margin-left: 2%;
+		overflow: visible;
+		width: auto;
+	}
+	.site-menu > li, .settings-menu > li {
+		margin: 0 2px 0;
+	}
+	.site-menu > li a, .settings-menu > li a {
+		border-left: 1px solid;
+		border-right: 1px solid;
+	}
+	.site-menu > li > a {
+		padding: 0.45em 14px;
+	}
+	.settings-menu > li > a {
+		padding: 0.9em 25px 0.9em 10px;
+	}
+	.settings-menu {
+		padding-left: 22px;
+	}
+	.site-menu .menu-drop > a {
+		padding-right: 25px;
+	}
+	.site-menu .selected > a, .settings-menu .selected > a, .menu-drop.selected > a, .menu-drop.current > a, 
+	.menu-drop > a:hover, .menu-drop > a:focus {
+		border: 1px solid;
+		border-bottom: 5px solid;
+		padding-bottom: 0.4em;
+		padding-top: 0.6em;
+		position: relative;
+		top: -0.2em;
+	}
+	.menu-drop.selected > a, .menu-drop.current > a {
+		z-index: 1;
+	}
+	.menu-drop > a:hover, .menu-drop > a:focus, .menu-drop.current > a {
+		z-index: 3;
+	}
+	.menu-drop > a:hover + ul, .menu-drop > a:focus + ul, .menu-drop ul:hover {
+		z-index: 2;
+	}
+	.settings-menu .menu-drop.selected > a, .settings-menu .menu-drop > a:hover, .settings-menu .menu-drop > a:focus, .settings-menu .menu-drop.current > a {
+		padding-bottom: 0.8em;
+		padding-top: 1.0em;
+		top: -0.2em;
+	}
+	.menu-drop.secondary > a:hover, .menu-drop.secondary > a:focus, .menu-drop.secondary.current > a {
+		border: none;
+		border-left: 1px solid;
+		border-right: 1px solid;
+		padding: 0 15px 0 25px;
+		top: 0;
+		z-index: 0;
+	}
+	.menu-drop.secondary ul {
+		border-left: 0;
+		right: -195px;
+		top: -10px;
+		z-index: 4;
+	}
+	
+	/* id elements: =# */
+	#about {
+		padding: 1em 0 2.5em;
+		text-align: left;
+	}
+	#about p {
+	    margin: 0 170px 0 10px;
+	}
+	#links-site {
+		border-bottom: 1px solid;
+		border-top: 1px solid;
+		overflow: hidden;
+		/*width: 59%;	*/
+	}
+	#links-site li {
+		margin: 0;
+		padding: 6px 0;
+	}
+	#links-site li a {
+		border-right: 1px solid;
+		padding: 0 6px; 
+	}
+	#links-site li:nth-child(1n+2) a {
+		border-left: 1px solid;
+	}
+	#links-site li:last-child a {
+		border-right: none;
+	}
+	#links-social {
+		float: left;
+		margin-bottom: 0;
+		margin-left: 10px;
+		width: auto; 
+	}
+	#links-social li {
+		margin-right: 7px;
+	}
+	#nav-local {
+		border-top: 1px solid;
+		border-bottom: 2px solid;
+		min-height: 3.25em;
+	}
+	#nav-local .menu-drop a:hover, #nav-local .menu-drop a:focus, #nav-local .menu-drop .borderless {
+		border-bottom: none;
+	}
+	#nav-local .selected {
+		border-bottom: 0;
+	}
+	#social-networks {
+		border-bottom: 1px solid;
+		border-top: 1px solid;
+		overflow: hidden;
+		padding: 5px 0 6px;
+		float: right;
+		width: 41%;
+	}
+	#social-networks p {
+		float: left;
+		margin-bottom: 0;
+		width: 35%;
+	}
+	
+	/*   Media between 1024 and 1199   */
+	fieldset {
+		border-left: none;
+		border-right: none
+	}
+
+	/* class elements: =. */
+	.full-page main .section {
+		overflow: hidden
+	}
+	.half-page-primary {
+		float: left;
+		width: 645px
+	}
+	.half-page-primary.marketing {
+		width: 475px
+	}
+	.half-page-primary.marketing dd span {
+		width: 26%;
+	}
+	.half-page-primary.marketing dl {
+		width: 95%
+	}
+	.half-page-secondary {
+		float: right;
+		overflow: hidden;
+		width: 250px
+	}
+	.half-page-secondary.marketing {
+		width: 425px
+	}
+
+	/* id elements: =# */
+	#links-dmhc {
+		width: auto;
+	}
+	#links-dmhc .dmhc-analyst-insight {
+		height: 41px;
+		width: 220px;
+	}
+	#links-dmhc .dmhc-consulting {
+		height: 41px;
+		width: 220px;
+	}
+	#links-site {
+		/*width: 64%;*/
+	}
+	#social-networks {
+		width: 36%;
+	}
+	#wrapper, footer[role='contentinfo'] {
+		max-width: 980px /* the DM default fixed-width layout */
+	}
+	
+	
+	/***************************/
+	/*   From c_colour.css..   */
+	/***************************/
+
+	/*   Media between 480 and 767    */
+	dd span {
+		background: url(/kc/images/m/consumer/arrow-right-FS.png) no-repeat left 3px;
+	}
+	
+	/* class elements: =. */
+	.definition-simple dt {
+		background-color: #efefef;
+		color: #666;
+	}
+	.home main h1 {
+		background: url(../images/logo_hckc.png) no-repeat 0 0;
+	}
+	.menu-fat .home ul .kc-consumer {
+		background: url(/kc/images/m/mast-kc-consumer-lrg.png) no-repeat center center;
+	}
+	.menu-fat .home ul .kc-energy {
+		background: url(/kc/images/m/mast-kc-energy-lrg.png) no-repeat center center;
+	}
+	.menu-fat .home ul .kc-financial {
+		background: url(/kc/images/m/mast-kc-financial-lrg.png) no-repeat center center;
+	}
+	.menu-fat .home ul .kc-healthcare {
+		background: url(/kc/images/m/mast-kc-healthcare-lrg.png) no-repeat center center;
+	}
+	.menu-fat .home ul .kc-solutions {
+		background: url(/kc/images/m/mast-kc-dmsolutions-lrg.png) no-repeat center center;
+	}
+	.menu-fat .lone a {
+		text-shadow: none;
+	}
+	.menu-select {
+		color: #666;
+	}
+	.menu-tabs {
+		border-bottom-color: #ccc;
+	}
+	.menu-tabs li.selected a {
+		border-bottom-color: #fff;
+		-webkit-border-radius: 5px 5px 0 0;	-moz-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0;
+	}
+	
+	/*   Media between 768 and 899      */
+	main {
+		background: none;
+	}
+	
+	/* class elements: =. */
+	
+	
+	/* id elements: =# */
+	#links-dmhc .dmhc-analyst-insight {
+		background: url(../images/dmhc_analyst_insight.png) no-repeat 0 0;
+	}
+	#links-dmhc .dmhc-consulting {
+		background: url(../images/dmhc_consulting.png) no-repeat 0 0;
+	}
+	#nav-global {
+		background: #547094; /* Old browsers */ background: -moz-linear-gradient(top,  #547094 0%, #022c61 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#547094), color-stop(100%,#022c61)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top,  #547094 0%,#022c61 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(top,  #547094 0%,#022c61 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(top,  #547094 0%,#022c61 100%); /* IE10+ */ background: linear-gradient(top,  #547094 0%,#022c61 100%); /* W3C */
+	}
+	#nav-global > ul > li > a {
+		border-left-color: rgba(255, 255, 255, 0.1);
+		border-right-color: rgba(0, 0, 0, 0.1);
+		-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+		-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+		color: #95a6bd;
+	}
+	/*
+	#nav-global > ul > li > a:hover {
+		color: #fff;
+		transition: color 0.5s ease 0s;
+	}
+	*/
+	#nav-global .home > a {
+		background: url(/kc/images/m/icon-home.png) no-repeat center center;
+		-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+		-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+	}
+	/*
+	#nav-global .home > a:hover, #nav-global .home > a.highlight {
+		background: #fff url(/kc/images/m/button-home-over.png) no-repeat center center;
+	}
+	*/
+	#nav-global .home ~ li {
+		background: transparent;
+	}
+	#nav-global .home ul {
+		-moz-border-radius: 0 5px 5px 5px; -webkit-border-radius: 0 5px 5px 5px; border-radius: 0 5px 5px 5px;
+		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7); box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+	}
+	#nav-global.open-menu {
+		-moz-box-shadow: -1px -3px 5px rgba(0, 0, 0, 0.4); -webkit-box-shadow: -1px -3px 5px rgba(0, 0, 0, 0.4); box-shadow: -1px -3px 5px rgba(0, 0, 0, 0.4); 
+	}
+	#nav-local-inactive {
+		background: #f8f8f8; /* Old browsers */ background: -moz-linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#fff)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* Opera 11.10+ */ background: -ms-linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* IE10+ */ background: linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* W3C */
+		border-bottom-color: #009ada;
+	}
+	
+	/*   Media between 900 and 1023   */
+	header {
+		background: url(../images/logo-service.png) no-repeat right 1.5em;
+	}
+	
+	/* class elements: =. */
+	.menu-drop a {
+		background: url(/kc/images/m/consumer/arra-down-FS.png) no-repeat right center;
+	}
+	.menu-drop ul {
+		background: #fff; /* Old browsers */ background: -moz-linear-gradient(center top , #fff 80%, #f6f6f6 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #fff), color-stop(100%, #f6f6f6)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(center top , #fff 80%, #f6f6f6 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(center top , #fff 80%, #f6f6f6 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(center top , #fff 80%, #f6f6f6 100%); /* IE10+ */ background: linear-gradient(center top , #fff 80%, #f6f6f6 100%); /* W3C */
+		-moz-border-radius: 0 5px 5px 5px; -webkit-border-radius: 0 5px 5px 5px; border-radius: 0 5px 5px 5px;
+		-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+	}
+	.menu-drop ul a {
+		background: none;
+		color: #0c6db7;
+	}
+	.menu-drop ul li {
+		background: url(../images/arra_right_hc.png) no-repeat 9px 5px;
+	}
+	.settings-menu .menu-drop:hover > ul, .settings-menu .menu-drop:focus > ul, .settings-menu .menu-drop .show-menu {
+		-moz-border-radius: 5px 0 5px 5px; -webkit-border-radius: 5px 0 5px 5px; border-radius: 5px 0 5px 5px;
+	}
+	.menu-fat a {
+		-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+		-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+		text-shadow: none;
+	}
+	.menu-fat li, #links-site, #social-networks {
+		background: #547094; /* Old browsers */ background: -moz-linear-gradient(top,  #547094 0%, #022c61 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#547094), color-stop(100%,#022c61)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top,  #547094 0%,#022c61 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(top,  #547094 0%,#022c61 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(top,  #547094 0%,#022c61 100%); /* IE10+ */ background: linear-gradient(top,  #547094 0%,#022c61 100%); /* W3C */
+	}
+	.site-menu li, .settings-menu li {
+		background: none;
+		-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+	}
+	.site-menu > li a, .settings-menu > li a {
+		border-left-color: transparent;
+		border-right-color: transparent;
+	}
+	.settings-menu {
+		background: url(/kc/images/m/consumer/user.png) no-repeat 0 0.75em;
+	}
+	.site-menu .selected > a, .settings-menu .selected > a, .menu-drop.selected > a, .menu-drop.current > a, 
+	.menu-drop > a:hover, .menu-drop > a:focus {
+		background-color: #fff;
+		background-position: right 1.07em;
+		border-color: #ccc;
+		border-bottom-color: #fff;
+		-moz-border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0;
+	}
+	.settings-menu .menu-drop.selected > a, .settings-menu .menu-drop > a:hover, .settings-menu .menu-drop > a:focus, .settings-menu .menu-drop.current > a {
+		background-position: right 1.37em;
+	}
+	.menu-drop.secondary > a:hover, .menu-drop.secondary > a:focus, .menu-drop.secondary.current > a {
+		background: transparent;
+		border-left-color: transparent;
+		border-right-color: transparent;
+	}
+	.menu-drop.secondary > a:after {
+		content: ' ...';
+	}
+	.menu-drop.secondary ul {
+		-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+	}
+	
+	/* id elements: =# */
+	#about {
+		background-position: center right;
+	}
+	#links-dmhc .dmhc-analyst-insight {
+		background: url(../images/dmhc_analyst_insight_sml.png) no-repeat 0 0;
+	}
+	#links-dmhc .dmhc-consulting {
+		background: url(../images/dmhc_consulting_sml.png) no-repeat 0 0;
+	}
+	#links-site {
+		border-bottom-color: #8095b0;
+		border-top-color: #aab7c8;
+		-webkit-box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25); -moz-box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25); box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);	
+	}
+	#links-site li a {
+		border-right-color: #333;
+	}
+	#links-site li:nth-child(1n+2) a {
+		border-left-color: #999;
+	}
+	#links-social li {
+		-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+	}
+	#nav-local {
+		background: #f8f8f8; /* Old browsers */ background: -moz-linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#fff)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* Opera 11.10+ */ background: -ms-linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* IE10+ */ background: linear-gradient(100% 100% 90deg, #e5e5e5, #fff); /* W3C */
+		border-top-color: #ccc;
+		border-bottom-color: #009ada;
+	}
+	#social-networks {
+		border-bottom-color: #8095b0;
+		border-top-color: #aab7c8;
+		-webkit-box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25); -moz-box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25); box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
+		color: #fff;
+	}
+	
+	
+	/******************************/
+	/*  From d_typography.css..   */
+	/******************************/
+	
+	/*   Media between 480 and 767    */
+	dd span {
+		font-size: 0.833em; /* 10px needed.. 10 / 12 = 0.833 */
+	}
+	
+	/* class elements: =. */
+	.menu-fat .lone a {
+		letter-spacing: 0;
+	}
+	.menu-tabs a, .menu-lozenge a {
+		font-size: 1em;
+	}
+	
+	/*   Media between 768 and 899    */
+	table {
+		font-size: 1em
+	}
+	
+	/* class elements: =. */
+	
+	
+	/* id elements: =# */
+	#nav-global p {
+		line-height: 30px;
+	}
+	#nav-global > ul > li > a {
+		font-weight: bold;
+		line-height: 20px;
+	}
+	#nav-local-inactive {
+		line-height: 2;
+	}
+	
+	/*   Media between 900 and 1023  */
+	footer a {
+	    font: 1.0em Arial, Helvetica, sans-serif; 
+	}
+	/* class elements: =. */
+	.menu-drop ul a {
+		font: 1em Arial, Helvetica, sans-serif; /* 12px needed.. 12 / 12 = 1 */
+		line-height: 1.5;
+		text-align: left;
+	}
+	.site-menu > li > a {
+		font-size: 1.25em; /* 15px needed.. 15 / 12 = 1.25 */
+	}
+	.settings-menu > li a {
+		text-transform: capitalize;
+	}
+	.settings-menu > li > a {
+		font-size: 0.917em; /* 11px needed.. 11 / 12 = 0.917 */
+	}
+	
+	/* id elements: =# */
+	#about {
+		text-align: left;
+	}
+	#social-networks p {
+		font-size: 1em; /* back to 12px */
+		text-align: right;
+	}
+	
+	/*   Media greater than 1024     */
+	/* class elements: =. */
+	.half-page-secondary.marketing h2:first-child {
+		margin-top: 1.1em;
+	}
+	
+/*
+END (i) Replicated selectors 
+*/
+
+
+
+/*
+BEGIN: (ii) Specific IE selectors 
+
+In this region below: add any further IE-specific CSS.
+
+Hack Key:
+-------- 
+   color: #f00     All targeted IE; this is an IE-specific stylesheet
+   color: #f00\9;  IE 8 and below 
+   *color: #f00;   IE 7 and below 
+   _color: #f00;   IE 6 and below
+   _col\or: #f00;  IE 6 only
+*/
+
+textarea {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+th {
+	text-align: inherit;
+}
+th:first-child {
+	padding-left: 3px;
+}
+/* custom solid border for IE7/IE8 around fancybox requestors (no support for box-shadow property) */
+.fancybox-opened .fancybox-skin {
+	border: 4px solid #ccc;
+}
+
+.site-menu .selected > a, .settings-menu .selected > a, .menu-drop.selected > a, .menu-drop.current > a, .menu-drop > a:hover, .menu-drop > a:focus {
+	*border-bottom: 0;
+	*padding-bottom: 0.4em;
+}
+
+.menu-drop ul {
+	background: #fff; 
+	padding-top: 0;
+}
+.menu-drop ul li:first-child {
+	background-position: 9px 15px;
+	padding-top: 10px;
+}
+.radio-inline .menu-horiz li {
+    /**width: 150px;*/
+}
+.radio-inline label {
+    float: none;
+}
+.quick-search input[type=submit] {
+	*text-transform: capitalize; /* hack to shift input text off-screen in IE7 */
+}
+#nav-global ul.show-menu {
+	left: auto;
+}
+#nav-local {
+	*position: relative;
+	*z-index: 10;
+}
+#nav-local li ul {
+	*background: #fff;
+	border: 1px solid #ccc;
+	border-top: 0;
+	/* IE8 */
+	/*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color=black, direction=135, strength=2)";*/
+	/* IE6/IE7 */
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(Color=black, direction=135, strength=2);*/
+}
+#nav-local .menu-drop ul a {
+	position: static;
+}
+
+/* hack to fix clearType rendering being switched off by IE proprietary filters.. */
+#nav-local a, .nav-local-status li, [role='main'] section {
+	position: relative;
+}
+
+/*
+END: (ii) Specific IE selectors 
+*/

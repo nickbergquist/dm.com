@@ -1,0 +1,1134 @@
+/*
+/////////////////////////////////////////////////////////////////////
+///   DM : page layout - default is for viewport 320px wide       ///
+///                                                               ///
+///   Be wary of removing seemingly unused selectors, this is     ///
+///   a standardised stylesheet used across several KCs.          ///
+///                                                               ///
+///   Queries: nicholas.bergquist@informa.com                     ///
+/////////////////////////////////////////////////////////////////////
+*/
+
+/*******************************************************************/
+/*  Default 320px media width                                      */
+/*******************************************************************/
+
+/* Generic DOM elements */
+article {
+	border-bottom: 1px solid;
+	overflow: hidden;
+	padding-bottom: 0.75em;
+}
+article dd {
+	margin-right: 1%;
+	padding-right: 1%;
+}
+article dl {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+article h3 {
+	margin-top: 1em;
+}
+blockquote {
+	margin-bottom: 2em;
+	padding: 1em;
+}
+html {
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* not inherited by default */
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; /* apply desired box model to all but allowing local change */
+}
+body {
+    min-width: 320px; /* fix the minimum width */
+}
+dd {
+	border-right: 1px solid;
+	float: left;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+dd:last-child {
+	border-right: none;
+}
+dd span {
+    display: inline-block;
+    padding: 10px 0;
+}
+dt {
+	float: left;
+}
+dl {
+	clear: both;
+	margin: 0 auto 1.3em;
+	overflow: auto;
+}
+fieldset {
+	border-bottom: 1px solid;
+	clear: both;
+	padding: 1em 0 2em;
+}
+figure {
+	margin: 1.25em 0 0.75em; 
+}
+figcaption {
+	margin-bottom: 0.75em;
+}
+footer[role='contentinfo'] {
+	clear: left;
+	padding: 15px 2% 20px;
+	margin: 0 auto;
+	width: 95%
+}
+form {
+	clear: left;
+	margin: 10px 0 25px 0;
+}
+form dt, form dd {
+	border: none;
+	float: none;
+}
+header {
+	padding: 2em 2.04% 0; /* 20/980 x 100 = 2.04 */
+}
+header h1 {
+	height: 91px;
+	width: 290px;
+}
+header h1 a {
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	text-indent: -999em;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+input[type='text'], input[type='password'], select, textarea {
+    border: 1px solid;
+    float: left;
+    padding: 10px;
+}
+input[type='text'], input[type='password'] {
+    width: 100%;
+}
+input[type='text']:focus, input[type='password']:focus, textarea:focus {
+	border: 1px solid;
+}
+input[type='submit'], input[type='button'], button {
+    border: 1px solid;
+    float: right;
+    padding: 4px 10px;
+    width: auto;
+}
+input.alert, select.alert, textarea.alert, input.invalid, select.invalid, textarea.invalid {
+    border: 1px solid;
+}
+legend {
+    left: -999em;
+	padding: 0 10px;
+	position: absolute;
+}
+li {
+	padding-left: 20px;
+}
+main {
+	clear: left;
+	margin-top: 1em;
+	overflow: hidden;
+	padding: 1.25em 2% 0;
+}
+main ul {
+	margin-bottom: 0.75em	
+}
+main ul ul {
+	margin-top: 1em
+}
+option {
+    padding: 5px 10px;
+}
+p, li, article {
+	margin-bottom: 0.75em; /* 1.5 x 0.5 = 0.75, where 1.5 = def. body line-height & 0.5 = proportion allocated for bottom margins */ 
+}
+section, .section {
+	margin-bottom: 2em;
+}
+select {
+	height: 2.75em;
+    padding: 9px 10px;
+    width: 98%;
+}
+select.narrow {
+	width: 40%
+}
+section h2 {
+	margin-top: 0;
+}
+table {
+	border-top: 1px solid;
+	margin-bottom: 0.75em;
+	text-align: left;
+	width: 100%
+}
+tbody tr:first-child td {
+	padding-top: 6px
+}
+td, th {
+	padding: 3px;
+	vertical-align: top;
+}
+th:first-child {
+	padding-left: 1.02%; /* 10/980 x 100 */	
+}
+textarea {
+	width: 90%;
+}
+
+/* class elements: =. */
+.anchor-promotions li {
+	padding-left: 0;
+}
+.anchor-promotions h3 {
+	height: 75px;
+}
+.anchor-promotions h3 a {
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	text-indent: -999em; 
+}
+.anchor-citeline h3 a {
+	width: 172px /* width the same as the background image */
+}
+.anchor-biomedtracker h3 a {
+	width: 267px
+}
+.anchor-medtrack h3 a {
+	width: 205px
+}
+.anchor-scripintelligence h3 a {
+	width: 172px
+}
+.anchor-thepinksheet h3 a {
+	width: 202px
+}
+.collection-control label {
+    left: 25px;
+    position: relative;
+}
+.collection-control input {
+    display: inline-block;
+    margin-top: 4px;
+}
+.collection-control .definition-nested {
+	margin-bottom: 0;
+    margin-left: 27px;
+}
+.content-tabs {
+	clear: left;
+}
+.data-available {
+    text-indent: -999em;
+    width: 10px;
+}
+.definition-simple dd {
+	border: none;
+	float: none;
+}
+.definition-simple dt {
+	border-bottom: 1px dotted;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.fancy {
+	padding: 20px 20px 25px;
+}
+.fancy h3 {
+	border-bottom: 1px dotted;
+	margin: 5px 0 20px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+}
+.form-search {
+    position: relative;
+    width: 200px;
+}
+.form-search input[type=text] {
+    height: 29px;
+    padding: 0 30px 0 5px;
+    width: 100%;
+}
+.form-search input[type=submit] {
+    float: none;
+    height: 29px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    text-indent: -999em;
+}
+.full-page main .section {
+	overflow: scroll
+}
+.heading-fancy {
+	clear: both;
+	margin: 0 0 10px;
+	padding: 5px 10px;
+	position: relative;
+}
+.heading-fancy:before {
+	content: "";
+	float: left;
+	position: absolute;
+	bottom: -7px;
+	left: 12px;
+	width: 0;
+	height: 0;
+	border-left: 7px solid;
+	border-right: 7px solid;
+	border-top: 7px solid;	
+}
+li.heading-fancy {
+	clear: none;
+}
+li.heading-fancy:before {
+	display: none;
+}
+li.selected.heading-fancy:before {
+	display: block;	
+}
+.hide {  /* invisible & inaudible */
+    display: none; 
+    visibility: hidden 
+}
+.home main h1 {
+	height: 53px;
+	width: 290px;
+}
+/* 'js' class is added by scripting so only applies when scripting is available */
+.js .fancy {
+	display: none;
+}
+/* the visibility/behaviour of these objects is controlled in main.js */
+.js #nav-local > ul, .js #search, .js #nav-global > ul li:nth-child(n+2), .js #nav-global ul ul  {
+	display: none;
+}
+.menu-drop ul {
+	left: -999em;
+	position: absolute;
+	top: 2.9em;
+}
+.menu-buttons {
+	overflow: hidden;
+}
+.menu-general a {
+    display: block;
+    height: 100%
+}
+.menu-general li {
+    width: auto;
+}
+.menu-fat li {
+	margin: 0 1.12% 15px; /* 11/980 x 100 */
+	padding-left: 0;
+}
+.menu-fat li:last-child() {
+	margin-right: 0;
+}
+.menu-fat a {
+	border: 1px solid;
+    padding: 6px 2.08%;
+}
+.menu-fat .home {
+	border: none;
+}
+.menu-fat .home.alone {
+	margin-bottom: 0;
+}
+.menu-fat .home > a {
+	border: none;
+	height: 55px;
+	/*left: 10px;*/
+	overflow: hidden;
+	padding: 0 0 10px;
+	position: relative;
+	text-indent: -999em;
+	/*width: 255px;*/
+}
+.menu-fat .home li {
+	float: left;
+	margin: 5px 1% 2px;
+	padding: 0;
+	width: 48%;
+}
+.menu-fat .home li:nth-child(1n+3) {
+	margin: 0 1% 5px;
+}
+.menu-fat .home + li {
+	clear: left;
+}
+.menu-fat .home .selected a, .menu-fat .home li a:hover, .menu-fat .home li a:focus {
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+}
+.menu-fat .home ul {
+	margin: 0 auto 10px;
+	overflow: hidden;
+}
+.menu-fat .home ul a {
+	border: none;
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+	margin: 0 auto;
+	padding: 15px 0;
+	text-indent: -999em;
+	width: auto;
+}
+.menu-horiz li {
+    float: left;
+    width: auto;
+}
+.menu-horiz-delimited {
+	overflow: hidden
+}
+.menu-horiz-delimited li {
+	border-right: 1px solid;
+	padding: 0 6px;
+}
+.menu-horiz-delimited li:last-child {
+	border-right: none;
+	padding-right: 0;
+}
+.menu-paging {
+	margin-bottom: 1em;
+    overflow: hidden;
+}
+.menu-paging li {
+	margin-bottom: 0;
+	padding-left: 0;
+}
+.menu-paging li a {
+	padding: 4px 10px;
+}
+.menu-paging .selected {
+	padding: 4px 9px;
+}
+.menu-search-criteria {
+	border-bottom: 1px solid;
+	clear: left;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.menu-search-criteria:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+.menu-select {
+	float: none;
+	width: 100%
+}
+.menu-tabs {
+	float: left;
+	margin-bottom: 1.5em;
+	width: 100%;	
+}
+.menu-tabs a {
+	float: left;
+    padding: 8px;
+    width: auto;
+}
+.menu-tabs li {
+	margin-bottom: 0;
+	padding-left: 0;
+}
+.menu-tabs li a {
+	border: 1px solid;
+}
+.menu-tabs li.selected a {
+	border: 1px solid;
+}
+.off-screen {  /* invisible only */
+    height: 1px;
+    left: -999em;
+    overflow: hidden;
+    position: absolute;
+    width: 1px
+}
+.radio-inline {
+	margin: 10px 0 0;
+	width: auto;
+}
+.radio-inline label {
+	display: inline;
+    float: right;
+    padding: 0 15px 0 10px;
+    position: static;
+}
+.radio-inline li {
+	padding-left: 0;
+}
+.radio-inline ul {
+	margin-bottom: 0;
+}
+.radio-inline-descriptor {
+	float: none;
+    min-height: 20px;
+    padding-right: 0;
+    width: auto;
+}
+.site-menu {
+	overflow: hidden;
+	padding-top: 2.0em;	
+}
+.site-menu > li {
+	border: none;
+	border-top: 1px solid;
+	border-bottom: 3px solid;
+}
+.site-menu > li a {
+	border: none;
+}
+.table-metadata {
+	float: right;
+    width: auto;
+}
+
+/* id elements: =# */
+#about {
+	padding-bottom: 45px
+}
+#links-dmhc {
+	margin-bottom: 1.25em;
+}
+#links-social {
+	display: table;
+	margin: 0 auto 30px
+}
+#links-social li {
+	margin-bottom: 0;
+	margin-right: 30px;
+	padding-left: 0;
+}
+#links-social li:last-child {
+	margin-right: 0
+}
+#links-social li a {
+	padding: 1px 5px 2px 20px;
+}
+#nav-global {
+	overflow: hidden;
+}
+#nav-global p {
+	margin-bottom: 1.5em;
+	padding: 0.85em 2%;
+	text-indent: 20px;
+}
+#nav-global > ul {
+	clear: both;
+	padding: 0 2%;
+}
+#nav-global .button-show {
+	position: absolute;
+    left: 3%;
+    top: 0.45em;
+}
+#nav-local {
+	clear: left;
+	padding: 0 2%;
+}
+#nav-local .button-show {
+	position: absolute;
+    right: 5.5%;
+    top: 0.45em;
+}
+#nav-local .selected {
+	border-bottom: 3px solid;
+}
+#nav-local-inactive {
+	clear: left;
+	border-top: 1px solid;
+	padding-top: 1.5em;
+}
+#notice-cookie {
+	bottom: 0;
+	padding: 10px;
+	position: fixed;
+	width: 100%
+}
+#skip:active, #skip:focus {
+	position: static;
+}
+#wrapper {
+	padding-bottom: 1.5em;
+	margin: 0 auto;
+	width: 95%
+}
+
+/*******************************************************************/
+/*   Media between 480 and 767                                     */
+/*******************************************************************/
+@media only screen and (min-width: 480px) {
+	/*body:before { content: "Media between 480 and 767"; }*/
+	dd {
+		margin-right: 1.04%;
+	}
+	dd, dt {
+		padding: 0 1.04% 0 0;
+	}
+	dd span {
+		margin-top: 0.5em;
+		padding: 0 0 0 4%;
+	}
+	form dl {
+		width: 85%;
+	}
+	form dd {
+		float: left;
+		margin-right: 0;
+		padding: 0;
+		width: 70%;
+	}
+	form dt {
+		clear: left;
+		float: left;
+		margin-top: 10px;
+		padding-right: 2.04%; /* (20 / 980) * 100 */ 
+		width: 25%
+	}
+	select {
+		width: 61%;
+	}
+	select.narrow {
+		width: 30%;
+	}
+	
+	/* class elements: =. */
+	.aside-tool form {
+		width: 348px;
+	}
+	.aside-tool form dl {
+		width: 350px;
+	}
+	.aside-tool form dd {
+		width: 245px;
+	}
+	.aside-tool form dt {
+		width: 95px;
+	}
+	.button-show.button-search {
+		right: 14%;
+	}
+	.definition-simple dd {
+		padding-top: 5px;
+	}
+	.definition-simple dt {
+		border-bottom: none;
+		margin-right: 10px;
+		padding: 5px 10px;
+		width: 22%;
+	}
+	.home main h1 {
+		height: 75px;
+		width: 414px;
+	}
+	.menu-fat li {
+		float: left;
+		width: 47.6%;
+	}
+	.menu-fat .home {
+		width: 98%;
+	}
+	.menu-fat .lone {
+		position: absolute;
+		right: 5%;
+		top: 4.75em;
+		width: auto;
+	}
+	.menu-fat .lone a {
+		padding: 3px 8px;
+	}
+	.menu-buttons.menu-home {
+		margin: 0 auto 0.75em;
+		width: 80%;
+	}
+	.menu-buttons.menu-home li {
+		width: 65%
+	}
+	.menu-buttons.menu-home li:first-child, .menu-buttons.menu-home li:last-child {
+		width: 30%
+	}
+	.menu-buttons.menu-home li:nth-child(-n+2) {
+		margin-bottom: 0.75em
+	}
+	.menu-select {
+		float: right;
+		width: 47%;
+	}
+	.menu-tabs {
+		border-bottom: 1px solid;
+	}
+	.menu-tabs a {
+		font-size: 1em;
+		padding: 8px 12px 6px;
+	}
+	.menu-tabs li {
+		bottom: -1px;
+		position: relative;	
+	}
+	.menu-tabs li a {
+		border: none;
+	}
+	.menu-tabs li.selected a {
+		border-bottom: 1px solid;
+	}
+	.reversed-dt {
+		left: 31%;
+		margin-top: 0;
+		position: relative;
+	}
+	.reversed-dd input {
+		position: relative;
+		top: 2px;
+	}
+	.search-advanced {
+		width: auto;
+	}
+	
+	/* id elements: =# */
+	#about {
+		clear: left;
+	}
+	#nav-global > ul > li:nth-child(1n+2) {
+		width: 31%
+	}
+	#nav-local {
+		min-height: auto;
+		padding: 0
+	}
+}
+
+/*******************************************************************/
+/*   Media between 768 and 899                                     */
+/*******************************************************************/
+@media only screen and (min-width: 768px) { 
+	/*body:before { content: "Media between 768 and 899"; }*/
+	.js .fancy form dl {
+		width: 100%;
+	}
+	header {
+		padding: 0;
+	}
+	header h1 {
+		float: left;
+		margin: 30px 0 30px 2%;
+		position: static;
+	}
+	.fs header h1 {
+		width: 91%
+	}
+	main {
+		clear: both;
+		overflow: hidden;
+		padding-top: 0;
+		position: relative
+	}
+	
+	/* class elements: =. */
+	.content-tabs {
+		border: 1px solid;
+		overflow: hidden;
+		padding: 30px;
+	}
+	.content-tabs ul {
+		-webkit-column-count: 3; -moz-column-count: 3; column-count: 3;
+		-webkit-column-gap: 2em; -moz-column-gap: 2em; column-gap: 2em;
+	}
+	.content-tabs li {
+		margin-bottom: 0.2em;
+		overflow: hidden; /* stop element spreading over columns */
+		padding-left: 0;
+	}
+	.heading-fancy {
+		margin: 0 0 20px;
+	}
+	/* the visibility/behaviour of these objects is controlled in main.js */
+	.js #nav-local > ul, .js #search, .js #nav-global > ul li:nth-child(n+2), .js #nav-global ul ul {
+		display: block;
+	}
+	.menu-alternate {
+		padding-bottom: 3.5em
+	}
+	.menu-fat li {
+		width: 31%;
+	}
+	.menu-fat .home li {
+		width: 23%;
+	}
+	.menu-fat .home li:nth-child(1n+3) {
+		margin: 5px 1%;
+	}
+	.menu-fat .home ul a {
+		width: 100%;
+	}
+	.menu-fat .lone {
+		position: static;
+		width: auto;
+	}
+	.menu-fat.menu-buttons a {
+		padding: 6px 20px;
+	}
+	.menu-tabs-alternate {
+		border-bottom: none;
+		margin-bottom: 0;
+		margin-left: 10px;
+	}
+	.menu-tabs-alternate a {
+		padding: 15px 14px 15px 58px;
+	}
+	.site-menu {
+		padding-top: 0;
+	}
+	
+	/* id elements: =# */
+	#nav-global {
+		margin: 0 5px;
+	}
+	#nav-global p {
+		float: right;
+		margin-bottom: 0;
+		padding: 0 1.02% 0 0; /* 10/980 x 100 */
+		width: auto;
+	}
+	#nav-global > ul {
+		clear: none;
+		overflow: visible;
+		padding: 0;
+	}
+	#nav-global > ul > li {
+		clear: none;
+		margin: 0;
+		width: auto;
+	}
+	#nav-global > ul > li > a {
+		border: none;
+		border-left: 1px solid;
+		border-right: 1px solid;
+		height: 100%;
+		padding: 5px 10px;
+		position: relative;
+		z-index: 1;
+	}
+	#nav-global li:hover ul, #nav-global li:focus ul, #nav-global .home .show-menu {
+		left: auto;
+	}
+	#nav-global .home {
+		width: 31px;
+	}
+	#nav-global .home > a {
+		border: none;
+		left: 0;
+		padding: 5px 0;
+		position: relative;
+		width: 31px;
+		z-index: 3;
+	}
+	/*
+	#nav-global .home > a:hover, #nav-global .home > a.highlight {
+		border-right: none;
+	}
+	*/
+	#nav-global .home li {
+		width: 48%;
+	}
+	#nav-global .home li:nth-child(1n+3) {
+		margin: 0 1% 5px;
+	}
+	#nav-global .home ul {
+		left: -999em;
+		margin: 0;
+		padding: 0 5px;
+		position: absolute;
+		top: 2.25em;
+		width: 350px;
+		z-index: 2;
+	}
+	#nav-global > ul > li:nth-child(1n+2) {
+		width: auto
+	}
+	#nav-local-inactive {
+		border-bottom: 2px solid;
+		padding: 0 0 0 2%;
+	}
+}
+
+/*******************************************************************/
+/*   Media between 900 and 1023                                    */
+/*******************************************************************/
+@media only screen and (min-width: 900px) { 
+	/*body:before { content: "Media between 900 and 1023"; }*/
+	footer[role='contentinfo'] {
+		padding: 0 0 20px;
+		position: relative
+	}
+	form dl {
+		width: 70%;
+	}
+	
+	/* class elements: =. */
+	.collection-control label {
+		left: 150px;
+	}
+	.js .fancy {
+		float: left;
+		width: 450px;
+	}
+	.js .fancy dl {
+		width: 100%; /* allow for scrolling forms and form width containing error messages */
+	}
+	.fancy dl {
+		margin-bottom: 0;
+	}
+	.fancy fieldset {
+		margin-bottom: 5px;
+	}
+	.fancy.nested {
+		padding: 0;
+	}
+	.fancy.nested a {
+		padding: 6px 35px 6px 15px;
+	}
+	.fancy.nested h3 {
+		padding: 13px 20px 10px 35px;
+		margin: 0;
+	}
+	.fancy.nested li {
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+	.fancy.nested ul {
+		margin-bottom: 0;
+		padding: 10px 0 15px;
+	}
+	.header-non-standard {
+		margin-bottom: 0;
+	}
+	.menu-drop {
+		position: relative;
+	}
+	.menu-drop ul {
+		margin-left: 1px;
+		padding: 10px 0 5px 5px;
+		width: 210px;
+	}
+	.menu-drop ul a {
+		margin-bottom: 1em;
+		margin-right: 10px;
+		padding: 0 15px 0 25px;
+	}
+	.menu-drop ul li {
+		margin: 0;
+		width: 100%;
+	}
+	.menu-drop:hover > ul, .menu-drop:focus > ul, .menu-drop .show-menu {
+		left: auto;
+		z-index: 1;
+	}
+	.settings-menu .menu-drop ul {
+		width: 170px;
+	}
+	.settings-menu .menu-drop:hover > ul, .settings-menu .menu-drop:focus > ul, .settings-menu .menu-drop .show-menu {
+		margin-right: 1px;
+		right: 0;
+	}
+	.menu-fat a {
+		border: none;
+	}
+	.menu-fat li {
+		width: auto;
+	}
+	.menu-buttons.menu-home {
+		width: 80%;
+	}
+	.settings-menu {
+		float: right;
+		overflow: visible;
+		width: auto;
+	}
+	.site-menu li, .settings-menu li {
+		border: none;
+	}
+	.settings-menu li {
+		margin: 0;
+	}
+	.site-menu {
+		float: left;
+		margin-left: 2%;
+		overflow: visible;
+		width: auto;
+	}
+	.site-menu > li, .settings-menu > li {
+		margin: 0 2px 0;
+	}
+	.site-menu > li a, .settings-menu > li a {
+		border-left: 1px solid;
+		border-right: 1px solid;
+	}
+	.site-menu > li > a {
+		padding: 0.45em 14px;
+	}
+	.settings-menu > li > a {
+		padding: 0.9em 25px 0.9em 10px;
+	}
+	.settings-menu {
+		padding-left: 22px;
+	}
+	.site-menu .menu-drop > a {
+		padding-right: 25px;
+	}
+	.site-menu .selected > a, .settings-menu .selected > a, .menu-drop.selected > a, .menu-drop.current > a, 
+	.menu-drop > a:hover, .menu-drop > a:focus {
+		border: 1px solid;
+		border-bottom: 5px solid;
+		padding-bottom: 0.4em;
+		padding-top: 0.6em;
+		position: relative;
+		top: -0.2em;
+	}
+	.menu-drop.selected > a, .menu-drop.current > a {
+		z-index: 1;
+	}
+	.menu-drop > a:hover, .menu-drop > a:focus, .menu-drop.current > a {
+		z-index: 3;
+	}
+	.menu-drop > a:hover + ul, .menu-drop > a:focus + ul, .menu-drop ul:hover {
+		z-index: 2;
+	}
+	.settings-menu .menu-drop.selected > a, .settings-menu .menu-drop > a:hover, .settings-menu .menu-drop > a:focus, .settings-menu .menu-drop.current > a {
+		padding-bottom: 0.8em;
+		padding-top: 1.0em;
+		top: -0.2em;
+	}
+	.menu-drop.secondary > a:hover, .menu-drop.secondary > a:focus, .menu-drop.secondary.current > a {
+		border: none;
+		border-left: 1px solid;
+		border-right: 1px solid;
+		padding: 0 15px 0 25px;
+		top: 0;
+		z-index: 0;
+	}
+	.menu-drop.secondary ul {
+		border-left: 0;
+		right: -195px;
+		top: -10px;
+		z-index: 4;
+	}
+	
+	/* id elements: =# */
+	#about {
+		padding: 1em 250px 2.5em 0;
+	}
+	#about p {
+	    margin-left: 10px;
+	}
+	#links-site {
+		border-bottom: 1px solid;
+		border-top: 1px solid;
+		overflow: hidden;
+		/*width: 59%;	*/
+	}
+	#links-site li {
+		margin: 0;
+		padding: 6px 0;
+	}
+	#links-site li a {
+		border-right: 1px solid;
+		padding: 0 6px; 
+	}
+	#links-site li:nth-child(1n+2) a {
+		border-left: 1px solid;
+	}
+	#links-site li:last-child a {
+		border-right: none;
+	}
+	#links-social {
+		float: left;
+		margin-bottom: 0;
+		margin-left: 10px;
+		width: auto; 
+	}
+	#links-social li {
+		margin-right: 7px;
+	}
+	#nav-local {
+		border-top: 1px solid;
+		border-bottom: 2px solid;
+		min-height: 3.25em;
+	}
+	#nav-local .menu-drop a:hover, #nav-local .menu-drop a:focus, #nav-local .menu-drop .borderless {
+		border-bottom: none;
+	}
+	#nav-local .selected {
+		border-bottom: 0;
+	}
+	#social-networks {
+		border-bottom: 1px solid;
+		border-top: 1px solid;
+		overflow: hidden;
+		padding: 5px 0 6px;
+		float: right;
+		width: 41%;
+	}
+	#social-networks p {
+		float: left;
+		margin-bottom: 0;
+		width: 35%;
+	}
+}
+
+/*******************************************************************/
+/*   Media between 1024 and 1199                                   */
+/*******************************************************************/
+@media only screen and (min-width: 1024px) { 
+	/*body:before { content: "Media between 1024 and 1199"; }*/
+	fieldset {
+		border-left: none;
+		border-right: none
+	}
+
+	/* class elements: =. */
+	.full-page main .section {
+		overflow: hidden
+	}
+	.half-page-primary {
+		float: left;
+		width: 645px
+	}
+	.half-page-primary.marketing {
+		width: 475px
+	}
+	.half-page-primary.marketing dd span {
+		width: 26%;
+	}
+	.half-page-primary.marketing dl {
+		width: 95%
+	}
+	.half-page-secondary {
+		float: right;
+		overflow: hidden;
+		width: 250px
+	}
+	.half-page-secondary.marketing {
+		width: 425px
+	}
+
+	/* id elements: =# */
+	#social-networks {
+		width: 36%;
+	}
+	#wrapper, footer[role='contentinfo'] {
+		max-width: 980px /* the DM default fixed-width layout */
+	}
+}

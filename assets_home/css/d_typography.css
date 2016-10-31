@@ -1,0 +1,267 @@
+/*
+////////////////////////////////////////////////////////////////////////
+///   KC : Page typography - default is for viewport 320px wide      ///
+///                                                                  ///
+///   Keep our stylesheets tidy! See FogBugz Notes: W423             ///
+///                                                                  ///
+///   Note: Contains layout properties where these are               ///
+///   calculated from font properties.                               ///
+///                                                                  ///
+///   Queries: nicholas.bergquist@informa.com                        ///
+////////////////////////////////////////////////////////////////////////
+*/
+
+/* Generic DOM elements */
+article dl {
+	font-size: 0.917em; /* 11px required.. 11 / 12 = 0.917 */
+}
+blockquote {
+	font-style: italic;
+}
+body {
+	/* set base font size in % so that in IE the 'View > Text size' menu (useable with 'em' units) does not have  
+       large incremental step changes with 'em' units alone.
+	   
+       12px (desired base font size). 18px (1.5 x base font size) is desired base line-height.
+       (12px (desired base size) / 16px (def. browser size)) x 100 = 75%  */
+    font: 75%/1.5 Arial, Helvetica, sans-serif;	
+}
+caption {
+	font: bold 1.167em/1.5 Helvetica, sans-serif; /* 14px required.. 14 / 12 = 1.167; standardised leading, 18 / 12 = 1.5 */
+	margin-bottom: 0.75em; /* 1.5 x 0.5 = 0.75 */
+    margin-top: 2.25em; /* 1.5 x 1.5 = 2.25 */
+    text-align: left;
+}
+dd span {
+    font-weight: bold;
+    line-height: 1.3;
+}
+figcaption {
+	font-weight: bold;
+}
+footer[role='contentinfo'] {
+	text-align: center;
+}
+footer[role='contentinfo'] p {
+	font-size: 0.833em; /* 10px needed so 10 / 12 = 0.833 */
+}
+header h1 a {
+	text-indent: -999em;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+h1 {
+	font-size: 2.33em; /* 28px needed so, 28 / 12 = 2.33 */
+    line-height: 1.2em; /* non-standard line height */
+    margin-bottom: 0.9em; 
+}
+h2, .fs .lead h3, .consumer .lead h3 {
+	font-size: 1.5em; /* 18px required so 18 / 12 = 1.5 */
+    line-height: 1.2em; /* non-standard line height */
+    margin-bottom: 0.6em; /* 1.2 x 0.5 = 0.6 */
+    margin-top: 1.8em; /* 1.2 x 1.5 = 1.8 */
+}
+h3 {
+	font-size: 1.167em; /* 14px needed so, 14 / 12 = 1.167 */
+	line-height: 1.286em; /* standardised leading, 18 / 14 = 1.286 */
+	margin-bottom: 0.643em; /* 1.286 x 0.5 = 0.643 */
+    margin-top: 1.929em; /* 1.286 x 1.5 = 1.929 */
+}
+h4 {
+
+}
+h5 {
+	font-size: 1em; /* 12px needed so, 12 / 12 = 1 */
+	line-height: 1.5em; /* standardised leading, 18 / 12 = 1.5 */
+	margin-bottom: 0.75em; /* 1.5 x 0.5 = 0.75 */
+	margin-top: 2.25em; /* 1.5 x 1.5 = 2.25 */
+}
+h6 {
+	font: 1em helvetica, arial, sans-serif; /* 12px needed so, 12 / 12 = 1 */
+	line-height: 1.5em; /* standardised leading, 18 / 12 = 1.5 */
+	margin-bottom: 0.75em; /* 1.5 x 0.5 = 0.75 */
+	margin-top: 2.25em; /* 1.5 x 1.5 = 2.25 */
+}
+input[type='submit'], input[type='button'], button, .menu-buttons a, footer a {
+    font-size: 1.167em; /* 14px required.. 14 / 12 = 1.167 */
+}
+label {
+    line-height: 1.5;
+}
+option:first-child {
+    font-style: italic;
+}
+table {
+	font-size: 75%;
+}
+textarea {
+	font: 1em/1.5 Arial, Helvetica, sans-serif;
+}
+th {
+	font-weight: bold;
+}
+
+/* class elements: =. */
+.collection-control label {
+    white-space: nowrap;
+}
+.definition-simple dt {
+    font-weight: bold;
+}
+.heading-fancy {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 1em;  /* 12px needed.. 12 / 12 = 1 */
+}
+.home main h1 {
+	margin-top: 0.4em
+}
+.menu-fat li {
+	text-align: center;
+}
+.menu-horiz li {
+    white-space: nowrap;
+}
+.menu-paging .selected {
+	font-weight: bold;
+}
+.menu-tabs a a {
+    font-size: 80%;
+}
+.menu-tabs li li {
+	font-weight: bold;
+}
+.menu-tree-control a {
+	font-size: 80%;
+	font-weight: bold;
+}
+.more {
+	font-weight: bold;
+}
+.settings-menu > li a {
+	font-size: 0.833em; /* 10px needed.. 10 / 12 = 0.833 */
+	text-transform: uppercase;
+}
+.site-menu > li a {
+	font-family: Museo-700;
+}
+.table-metadata {
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+/* pseudo-classes */
+:link, :visited {
+	text-decoration: none;
+}
+:link:hover, :visited:hover {
+	text-decoration: underline
+}
+
+/* id elements: =# */
+#about {
+	line-height: 1.4
+}
+#links-social li a {
+	font-size: 90%;
+	font-weight: bold;
+}
+#nav-global > ul {
+	text-align: center;
+}
+#nav-local {
+	text-align: center;
+}
+#nav-local-inactive {
+	font: bold 1.5em/1.25 helvetica, arial, sans-serif; /* 18px needed, so 18 / 12 = 1.5 */
+}
+#nav-search-type {
+	text-align: center;
+}
+#search-status span {
+	font-weight: bold;
+}
+
+/*******************************************************************/
+/*   Media between 480 and 767                                     */
+/*******************************************************************/
+@media only screen and (min-width: 480px) {
+	dd span {
+		font-size: 0.833em; /* 10px needed.. 10 / 12 = 0.833 */
+	}
+	
+	/* class elements: =. */
+	.menu-fat .lone a {
+		letter-spacing: 0;
+	}
+	.menu-tabs a, .menu-lozenge a {
+		font-size: 1em;
+	}
+}
+
+/*******************************************************************/
+/*   Media between 768 and 899                                     */
+/*******************************************************************/
+@media only screen and (min-width: 768px) { 
+	table {
+		font-size: 1em
+	}
+	
+	/* class elements: =. */
+	
+	
+	/* id elements: =# */
+	#nav-global p {
+		line-height: 30px;
+	}
+	#nav-global > ul > li > a {
+		font-weight: bold;
+		line-height: 20px;
+	}
+	#nav-local-inactive {
+		line-height: 2;
+	}
+}
+
+/*******************************************************************/
+/*   Media between 900 and 1023                                    */
+/*******************************************************************/
+@media only screen and (min-width: 900px) { 
+	footer a {
+	    font: 1.0em Arial, Helvetica, sans-serif; 
+	}
+	/* class elements: =. */
+	.menu-drop ul a {
+		font: 1em Arial, Helvetica, sans-serif; /* 12px needed.. 12 / 12 = 1 */
+		line-height: 1.5;
+		text-align: left;
+	}
+	.site-menu > li > a {
+		font-size: 1.25em; /* 15px needed.. 15 / 12 = 1.25 */
+	}
+	.settings-menu > li a {
+		text-transform: capitalize;
+	}
+	.settings-menu > li > a {
+		font-size: 0.917em; /* 11px needed.. 11 / 12 = 0.917 */
+	}
+	
+	/* id elements: =# */
+	#about {
+		text-align: left;
+	}
+	#social-networks p {
+		font-size: 1em; /* back to 12px */
+		text-align: right;
+	}
+}
+
+/*******************************************************************/
+/*   Media greater than 1024                                       */
+/*******************************************************************/
+@media only screen and (min-width: 1024px) { 
+	/* class elements: =. */
+	.half-page-secondary.marketing h2:first-child {
+		margin-top: 1.1em;
+	}
+}

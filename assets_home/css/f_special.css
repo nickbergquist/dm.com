@@ -1,0 +1,332 @@
+/*
+////////////////////////////////////////////////////////////////////////
+///   KC : Supplementary CSS - third-party component overrides       ///
+///                                                                  ///
+///   Queries: nicholas.bergquist@informa.com                        ///
+////////////////////////////////////////////////////////////////////////
+*/
+
+/* Fancybox - this is a customised version of the standard CSS supplied. 
+   NOTE: Anything styled INSIDE the inner fancybox container should be done so in the other CSS stylesheets. */
+.fancybox-tmp iframe, .fancybox-tmp object {
+	vertical-align: top;
+	padding: 0;
+	margin: 0;
+}
+.fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8020;
+}
+.fancybox-skin {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+	color: #444;
+	text-shadow: none;
+	-webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;
+}
+.fancybox-opened {
+	z-index: 8030;
+}
+.fancybox-opened .fancybox-skin {
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.fancybox-outer, .fancybox-inner {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	outline: none;
+	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+}
+.fancybox-inner {
+	height: auto !important;
+}
+.fancybox-type-iframe .fancybox-inner {
+	-webkit-overflow-scrolling: touch;
+}
+.fancybox-error {
+	color: #444;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	padding: 10px;
+}
+.fancybox-image, .fancybox-iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+.fancybox-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+	background: url(/kc/images/consumer/close.png) no-repeat center center;
+}
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	background-position: 0 -108px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 8020;
+}
+#fancybox-loading div {
+	width: 44px;
+	height: 44px;
+	background: url(/kc/images/consumer/fancybox_loading.gif) center center no-repeat;
+}
+.fancybox-close {
+	border: none;
+	color: #878787;
+	cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    z-index: 8040;
+}
+.fancybox-close.fancybox-scroll-y {
+	right: 20px
+}
+.fancybox-nav {
+	position: absolute;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	cursor: pointer;
+	background: transparent url('blank.gif'); /* helps IE */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	z-index: 8040;
+}
+.fancybox-prev {
+	left: 0;
+}
+.fancybox-next {
+	right: 0;
+}
+.fancybox-nav span {
+	position: absolute;
+	top: 50%;
+	width: 36px;
+	height: 34px;
+	margin-top: -18px;
+	cursor: pointer;
+	z-index: 8040;
+	visibility: hidden;
+}
+.fancybox-prev span {
+	left: 20px;
+	background-position: 0 -36px;
+}
+.fancybox-next span {
+	right: 20px;
+	background-position: 0 -72px;
+}
+.fancybox-nav:hover span {
+	visibility: visible;
+}
+.fancybox-tmp {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	padding: 0;
+	overflow: visible;
+	visibility: hidden;
+}
+#fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	z-index: 8010;
+	background: #000;
+}
+#fancybox-overlay.overlay-fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.fancybox-title {
+	visibility: hidden;
+	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	position: relative;
+	text-shadow: none;
+	z-index: 8050;
+}
+.fancybox-opened .fancybox-title {
+	visibility: visible;
+}
+.fancybox-title-float-wrap {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	margin-bottom: -35px;
+	z-index: 8030;
+	text-align: center;
+}
+.fancybox-title-float-wrap .child {
+	display: inline-block;
+	margin-right: -100%;
+	padding: 2px 20px;
+	background: transparent; /* Fallback for web browsers that doesn't support RGBa */
+	background: rgba(0, 0, 0, 0.8);
+	-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;
+	text-shadow: 0 1px 2px #222;
+	color: #FFF;
+	font-weight: bold;
+	line-height: 24px;
+	white-space: nowrap;
+}
+.fancybox-title-outside-wrap {
+	position: relative;
+	margin-top: 10px;
+	color: #fff;
+}
+.fancybox-title-inside-wrap {
+	margin-top: 10px;
+}
+.fancybox-title-over-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	padding: 10px;
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+}
+/* end of fancybox stuff */
+
+/* Informa top ribbon */
+#iribbon-container {
+    background: #525a5c;
+    border-bottom: 1px solid #a5acaf;
+	color: #fff;
+    font-size: 13px;
+    min-height: 35px;
+    line-height: 18px;
+	position: relative;
+}
+#iribbon-container a {
+    color: #fff;
+}
+#iribbon-container ul, #iribbon-container ol {
+    margin: 0 0 20px 20px;
+}
+#iribbon-container nav ul, #iribbon-container nav ul li {
+    list-style: outside none none;
+    margin: 0;
+    padding: 1em 0;
+}
+#iribbon-detail {
+    margin: 0 auto;
+    max-width: 1180px;
+	overflow: hidden;
+    padding-bottom: 2em;
+	transition: max-height 500ms ease-in-out 0s, min-height 500ms ease-in-out 0s;
+}
+#iribbon-detail p {
+    margin-bottom: 0;
+}
+#iribbon-detail ul, #iribbon-detail ul li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+#iribbon-detail ul li {
+    line-height: 1em;
+    margin-bottom: 1.25em;
+    padding: 0 15px 0 0;
+}
+#iribbon-detail ul li:last-child {
+    border: 0 none;
+}
+#iribbon-detail ul li a {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+#iribbon-detail ul li:first-child a {
+    font-weight: bold;
+    text-transform: none;
+}
+#iribbon-detail.ribbon-hide {  /* script added class */
+    max-height: 0  
+}
+#iribbon-detail.ribbon-show {  /* script added class */
+    max-height: 400px 
+}
+#iribbon-right, #iribbon-left {
+    float: left;
+    margin: 40px 0;
+    max-width: 570px;
+    padding: 0 2%;
+    width: 45%;
+}
+#iribbon-right {
+    border-left: 1px solid #a5acaf;
+    float: right;
+    padding-left: 2%;
+}
+#iribbon-title {
+    background: url(../images/iribbon-logo.gif) no-repeat center top;
+    border: none;
+	bottom: 0;
+    border-radius: 0;
+	box-shadow: none;
+	cursor: pointer;
+    display: block;
+    height: 16px;
+    left: 50%; /* center the left edge of the <button> within its container */
+	margin: 10px auto 10px -46px; /* center the <button> about its centre - half the width */
+	position: absolute;
+	text-indent: -999em;
+    -moz-transition: none; -webkit-transition: none; -o-transition: color 0 ease-in; transition: none;
+	width: 92px;
+}
+@media not all, not all { 
+	#iribbon-title {
+		background: rgba(0, 0, 0, 0) url("../images/iribbon-logo@2x.png") repeat 0 0 / 92px 34px;
+	}
+}
+#iribbon-title.active {  /* script added class */
+    background-position: center bottom;
+}
+/* end of Informa top ribbon */
+
+
+/* cookie notice */
+#notice-cookie {
+    bottom: 0;
+    background: #525a5c;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+	width: 100%;
+}
+#btn-cookies-accept {
+	float: none;
+	margin: 0 5px;
+	vertical-align: top;
+}
+#notice-cookie *:link, #notice-cookie *:visited {
+    color: #fff;
+    text-decoration: underline;
+}
+/* end of cookie notice */
